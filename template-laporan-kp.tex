@@ -1,0 +1,142 @@
+%-------------------------------------------------------------------------------
+%                      Template Naskah Laporan Kerja Praktik
+%               	     Berdasarkan format DTETI FT UGM
+% 						   modified by @mdaniyalk 2024
+% 				    originated from Template Naskah Skripsi
+% 						    (c) @gunturdputra 2014
+%-------------------------------------------------------------------------------
+
+%Template pembuatan naskah laporan kerja praktik.
+\documentclass{jtetikp}
+
+%Untuk prefiks pada daftar gambar dan tabel
+\usepackage[titles]{tocloft}
+\renewcommand\cftfigpresnum{Gambar\  }
+\renewcommand\cfttabpresnum{Tabel\   }
+
+%Untuk hyperlink dan table of content
+\usepackage{hyperref}
+\newlength{\mylenf}
+\settowidth{\mylenf}{\cftfigpresnum}
+\setlength{\cftfignumwidth}{\dimexpr\mylenf+2em}
+\setlength{\cfttabnumwidth}{\dimexpr\mylenf+2em}
+
+%Untuk Bold Face pada Keterangan Gambar
+\usepackage[labelfont=bf]{caption}
+
+%Untuk caption dan subcaption
+\usepackage{caption}
+\usepackage{subcaption}
+
+
+%-----------------------------------------------------------------
+%Disini awal masukan untuk data laporan kerja praktik
+%-----------------------------------------------------------------
+\titleind{JUDUL}
+
+\fullname{Muchammad Daniyal Kautsar}
+
+\idnum{21/479067/TK/52800}
+
+\approvaldate{dd mmmm yyyy}
+
+\degree{Sarjana Teknologi Informasi}
+
+\yearsubmit{2024}
+
+\program{Teknologi Informasi}
+
+\dept{Teknik Elektro dan Teknologi Informasi}
+
+\firstsupervisor{ NAMA DOSEN}
+\firstnip{NIP}
+
+
+%-----------------------------------------------------------------
+%Disini akhir masukan untuk data proposal laporan kerja praktik
+%-----------------------------------------------------------------
+
+\begin{document}
+
+\cover
+
+\approvalpage
+
+%-----------------------------------------------------------------
+%Disini awal masukan Bukti KP
+%-----------------------------------------------------------------
+\proof
+\includegraphics[width=0.8\textwidth]{gambar/buktikp.png}
+
+%-----------------------------------------------------------------
+%Disini awal masukan untuk Prakata
+%-----------------------------------------------------------------
+\preface
+Assalamu'alaikum Wr. Wb.
+
+\vspace{0.5cm}
+
+Puji syukur penulis panjatkan ke hadirat Allah SWT karena hanya dengan rahmat dan hidayah-Nya, Laporan Kerja Praktik ini dapat terselesaikan tanpa halangan berarti. Keberhasilan dalam menyusun laporan Kerja Praktik ini tidak lepas dari bantuan berbagai pihak yang mana dengan tulus dan ikhlas memberikan masukan guna sempurnanya laporan Kerja Praktik ini. Oleh karena itu dalam kesempatan ini, dengan kerendahan hati penulis mengucapkan terima kasih kepada:
+
+\begin{enumerate}
+\item{1.	Bapak Prof. Ir. Hanung Adi Nugroho, S.T., M.E., Ph.D., IPM., SMIEEE., selaku Ketua Departemen Teknik Elektro dan Teknologi Informasi Fakultas Teknik Universitas Gadjah Mada.}
+\item{Bapak .... selaku dosen pembimbing kerja praktik yang telah memberikan banyak bantuan, bimbingan, serta arahan dalam laporan ini,}
+\item{Cantumkan pihak-pihak lain yang ingin anda berikan ucapan terimakasih.}
+\end{enumerate}
+
+Penulis menyadari bahwa penyusunan Tugas Akhir ini jauh dari sempurna. Kritik dan saran dapat ditujukan langsung pada e-mail atau \emph{mention} langsung pada akun \emph{twitter} saya. Akhir kata penulis mohon maaf yang sebesar-besarnya apabila ada kekeliruan di dalam penulisan Tugas Akhir ini.
+
+\vspace{0.5cm}
+
+Wassalamu'alaikum Wr. Wb.
+
+\begin{tabular}{p{7.5cm}c}
+&Yogyakarta, dd month 2024\\
+&\\
+&\\
+&\textbf{Penulis}
+\end{tabular}
+
+%-----------------------------------------------------------------
+%Disini akhir masukan untuk muka laporan kerja praktik
+%-----------------------------------------------------------------
+\tableofcontents
+\addcontentsline{toc}{chapter}{DAFTAR ISI}
+\listoftables
+\addcontentsline{toc}{chapter}{DAFTAR TABEL}
+\listoffigures
+\addcontentsline{toc}{chapter}{DAFTAR GAMBAR}
+
+%-----------------------------------------------------------------
+%Disini awal masukan untuk Bab
+%-----------------------------------------------------------------
+\include{bab1}
+
+\include{bab2}
+
+\include{bab3}
+
+\include{bab4}
+
+\include{bab5}
+
+%-----------------------------------------------------------------
+%Disini akhir masukan Bab
+%-----------------------------------------------------------------
+
+
+%-----------------------------------------------------------------
+% Disini awal masukan untuk Daftar Pustaka
+% - Daftar pustaka diambil dari file .bib yang ada pada folder ini
+%   juga.
+% - Untuk memudahkan dalam memanajemen dan menggenerate file .bib
+%   gunakan reference manager seperti Mendeley, Zotero, EndNote,
+%   dll.
+%-----------------------------------------------------------------
+\bibliography{IEEEabrv,daftar-pustaka}
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+%-----------------------------------------------------------------
+%Disini akhir masukan Daftar Pustaka
+%-----------------------------------------------------------------
+
+\end{document}

@@ -11,7 +11,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 %Created by Pekik Nurwantoro, Universitas Gadjah Mada, Yogyakarta, Indonesia
-\ProvidesClass{jtetiskripsi}
+\ProvidesClass{jtetikp}
 
 \RequirePackage[english,bahasa]{babel}
 \RequirePackage{indentfirst}
@@ -30,6 +30,7 @@
 \usepackage{multirow}
 \usepackage{float}
 \usepackage{indentfirst}
+
 
 \newif\if@msthesis
 \newif\if@msproposal
@@ -50,7 +51,7 @@
 \DeclareOption{inggris}{\@langindofalse\@langengtrue}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
-\ExecuteOptions{jtetiskripsi,satusetengahspasi,indonesia}
+\ExecuteOptions{jtetikp,satusetengahspasi,indonesia}
 \ProcessOptions
 \LoadClass[a4paper,12pt]{report}
 %\RequirePackage{natbib}
@@ -169,6 +170,7 @@
 \def\nomenclaturename{DAFTAR SINGKATAN}%
 \def\abstractname{Intisari}%
 \def\acknowledgmentname{HALAMAN PERSEMBAHAN}%
+\def\proofname{BUKTI PELAKSANAAN KERJA PRAKTIK}%
 \def\approvalname{HALAMAN PENGESAHAN}
 \def\partname{BAGIAN}%
 \def\chaptername{BAB}%
@@ -216,7 +218,7 @@
 \newcommand{\examdate}[1]{\gdef\@examdate{#1}}
 \newcommand{\approvaldate}[1]{\gdef\@approvaldate{#1}}
 \newcommand{\@examdate}{\number\day~\ifcase\month\or
-    Januari\or Pebruari\or Maret\or April\or Mei\or Juni\or
+    Januari\or Februari\or Maret\or April\or Mei\or Juni\or
     Juli\or Agustus\or September\or Oktober\or Nopember\or Desember\fi
     \space \number\year}
 \newcommand{\degree}[1]{\gdef\@degree{#1}}
@@ -231,12 +233,8 @@
 \newcommand{\@dept}{}
 \newcommand{\firstsupervisor}[1]{\gdef\@firstsupervisor{#1}}
 \newcommand{\@firstsupervisor}{}
-\newcommand{\secondsupervisor}[1]{\gdef\@secondsupervisor{#1}}
-\newcommand{\@secondsupervisor}{}
 \newcommand{\firstnip}[1]{\gdef\@firstnip{#1}}
 \newcommand{\@firstnip}{}
-\newcommand{\secondnip}[1]{\gdef\@secondnip{#1}}
-\newcommand{\@secondnip}{}
 
 %------------------------------------------------------------
 %Define cover in Indonesian
@@ -247,9 +245,9 @@
   \setcounter{page}{1}
     \begin{center}
       \begin{singlespace}
-      \fontsize{14pt}{16pt}\selectfont\MakeUppercase{\normalfont\bfseries\@titleind}\par\nobreak
+      \MakeUppercase{\normalfont\bfseries LAPORAN KERJA PRAKTIK}\\
       \vspace{1.5cm}
-      \MakeUppercase{\normalfont\bfseries Skripsi}\\
+      \fontsize{14pt}{16pt}\selectfont\MakeUppercase{\normalfont\bfseries\@titleind}\par\nobreak 
       \vspace{1.0cm}
        \vfill
        \includegraphics[width=0.5\textwidth]{gambar/logougm.png}
@@ -260,7 +258,8 @@
         \MakeUppercase{\normalfont\bfseries \@idnum}}\\
        \vspace{1.5cm}
        {\normalfont 
-         \MakeUppercase{\normalfont\bfseries Jurusan \@dept}\\
+         \MakeUppercase{\normalfont\bfseries Program Studi \@program}\\
+         \MakeUppercase{\normalfont\bfseries Departemen \@dept}\\
          \MakeUppercase{\normalfont\bfseries\@faculty} \MakeUppercase{\normalfont\bfseries\@university}\\
          \MakeUppercase{\normalfont\bfseries\@city}\\
          \vspace{0.5cm}
@@ -278,11 +277,11 @@
   \begin{doublespace}
         \MakeUppercase{\normalfont\bfseries\@titleind}\par\nobreak
     \vspace{1.0cm}
-    \MakeUppercase{\normalfont\bfseries\expandafter{Skripsi}}\\
+    \MakeUppercase{\normalfont\bfseries\expandafter{Laporan Kerja Praktik}}\\
     \vspace{1.0cm}
     Diajukan Sebagai Salah Satu Syarat untuk Memperoleh\\
-    Gelar Sarjana Teknik Program S-1\\
-    Pada Jurusan \@dept \ \@faculty \\
+    Gelar Sarjana Teknik Program Studi Sarjana \@program \\
+    pada Departemen \@dept \ \@faculty \\
     \@university
 
     \vspace{1.0cm}
@@ -298,11 +297,10 @@
 
     \begin{singlespace}
     \begin{tabular}{ccc}
-      Dosen Pembimbing I & & Dosen Pembimbing II \\
+      Dosen Pembimbing Kerja Praktik \\
       \vspace{1cm} & \vspace{1cm} & \vspace{1cm}\\
-      \textbf{\underline{\@firstsupervisor}}& &
-      \textbf{\underline{\@secondsupervisor}} \\
-      \bfseries NIP. \@firstnip & & \bfseries NIP. \@secondnip    
+      \textbf{\underline{\@firstsupervisor}}\\
+      \bfseries NIP. \@firstnip 
     \end{tabular}
     \end{singlespace}
 
@@ -310,6 +308,15 @@
   \end{center}
 \addcontentsline{toc}{chapter}{\approvalname}
 }
+
+%------------------------------------------------------------
+%Proof
+%------------------------------------------------------------
+\def\proof{%
+  \chapter*{\proofname}%
+\addcontentsline{toc}{chapter}{\proofname}
+}
+
 
 %------------------------------------------------------------
 %Acknowlegment
