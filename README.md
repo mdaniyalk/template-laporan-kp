@@ -1,7 +1,7 @@
 Template Naskah Laporan Kerja Praktik LaTeX
 =============================
 
-Template Naskah Laporan Kerja Praktik dengan typesetting LaTeX untuk Departemen Teknik Elektro dan Teknologi Informasi (DTETI) Universitas Gadjah Mada. Template ini merupakan hasil modifikasi dari versi pak Guntur (DTETI UGM) yang mana merupakan hasil modifikasi dari pak Pekik Nurwantoro (FMIPA UGM) dan Pak Yohan (DTETI UGM).
+Template Naskah Laporan Kerja Praktik dengan typesetting LaTeX untuk Departemen Teknik Elektro dan Teknologi Informasi (DTETI) Universitas Gadjah Mada. Template ini merupakan hasil modifikasi dari versi [pak Guntur (DTETI UGM)](https://github.com/gtrdp/template-skripsi) yang mana merupakan hasil modifikasi dari pak Pekik Nurwantoro (FMIPA UGM) dan Pak Yohan (DTETI UGM).
 
 Semoga bermanfaat. Anda sangat dibolehkan untuk turut berkontribusi dalam project ini dengan *Fork*, *Pull Request*, *Create New Issue*, atau turut menjadi kontributor repo ini.
 
@@ -67,4 +67,4 @@ Masukkan gambar-gambar pada Laporan Kerja Praktik anda di folder ini. Gambar def
 
 Lisensi
 -------
-Template laporan kerja praktik ini diadopsi dan dimodifikasi dari [gtrdp/template-skripsi](github.com/gtrdp/template-skripsi) yang juga menggunakan [lisensi MIT](https://raw.githubusercontent.com/gtrdp/template-skripsi/master/LICENSE).
+Template laporan kerja praktik ini diadopsi dan dimodifikasi dari [gtrdp/template-skripsi](https://github.com/gtrdp/template-skripsi) yang juga menggunakan [lisensi MIT](https://raw.githubusercontent.com/gtrdp/template-skripsi/master/LICENSE).
